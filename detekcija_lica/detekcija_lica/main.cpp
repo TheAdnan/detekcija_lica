@@ -7,9 +7,11 @@
 
 using namespace std;
 using namespace cv;
-
-String lice_kaskada = "c:/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml";
-String oci_kaskada = "c:/opencv/sources/data/haarcascades/haarcascade_eye.xml";
+//druga lokacija
+//String lice_kaskada = "c:/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml";
+//String oci_kaskada = "c:/opencv/sources/data/haarcascades/haarcascade_eye.xml";
+String lice_kaskada = "d:/ETF/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml";
+String oci_kaskada = "d:/ETF/opencv/sources/data/haarcascades/haarcascade_eye.xml";
 CascadeClassifier lice;
 CascadeClassifier oci;
 string prozor = "Detekcija lica";
@@ -46,6 +48,10 @@ void nadjiFacu(Mat slika){
 	}
 	//krajnji rez
 	imshow(prozor, slika);
+	vector<int> parametri;
+	parametri.push_back(CV_IMWRITE_JPEG_QUALITY);
+	parametri.push_back(90);
+	imwrite("C:/Users/user/Desktop/apocalypse.jpg", slika, parametri);
 	cvWaitKey(10000);
 }
 
@@ -68,7 +74,7 @@ int main(int argc, const char** argv)
 	};
 
 	//ucitavanje slike
-	slika = imread("D:/Moji podaci/Desktop/sheikh_isa_qassim_ap.jpg");
+	slika = imread("C:/Users/user/Desktop/apocalypse-1.jpg");
 			if (!slika.empty())
 			{
 				nadjiFacu(slika);
