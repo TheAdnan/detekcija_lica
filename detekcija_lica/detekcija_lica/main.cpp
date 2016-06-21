@@ -9,7 +9,7 @@ using namespace std;
 using namespace cv;
 
 String lice_kaskada = "c:/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml";
-String oci_kaskada = "c:/opencv/sources/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml";
+String oci_kaskada = "c:/opencv/sources/data/haarcascades/haarcascade_eye.xml";
 CascadeClassifier lice;
 CascadeClassifier oci;
 string prozor = "Detekcija lica";
@@ -29,7 +29,7 @@ void nadjiFacu(Mat slika){
 	for (size_t i = 0; i < faces.size(); i++)
 	{
 		Point center(faces[i].x + faces[i].width*0.5, faces[i].y + faces[i].height*0.5);
-		ellipse(slika, center, Size(faces[i].width*0.5, faces[i].height*0.5), 0, 0, 360, Scalar(255, 0, 255), 4, 8, 0);
+		ellipse(slika, center, Size(faces[i].width*0.5, faces[i].height*0.5), 0, 0, 360, Scalar(255, 0, 0), 3, 8, 0);
 
 		Mat faceROI = slika_grayscale(faces[i]);
 		std::vector<Rect> eyes;
@@ -41,7 +41,7 @@ void nadjiFacu(Mat slika){
 		{
 			Point center(faces[i].x + eyes[j].x + eyes[j].width*0.5, faces[i].y + eyes[j].y + eyes[j].height*0.5);
 			int radius = cvRound((eyes[j].width + eyes[j].height)*0.25);
-			circle(slika, center, radius, Scalar(255, 0, 0), 4, 8, 0);
+			circle(slika, center, radius, Scalar(23, 255, 25), 1, 8, 0);
 		}
 	}
 	//krajnji rez
@@ -68,7 +68,7 @@ int main(int argc, const char** argv)
 	};
 
 	//ucitavanje slike
-	slika = imread("D:/Moji podaci/Desktop/detekcija_lica/test_slike/1.jpg");
+	slika = imread("D:/Moji podaci/Desktop/sheikh_isa_qassim_ap.jpg");
 			if (!slika.empty())
 			{
 				nadjiFacu(slika);

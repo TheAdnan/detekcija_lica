@@ -1,0 +1,2 @@
+http://stackoverflow.com/questions/5808434/how-does-the-viola-jones-face-detection-method-work
+https://github.com/BigheadLiu/projekt-grupa-244
