@@ -1,11 +1,11 @@
-﻿Build started 23.6.2016 11:27:37.
+﻿Build started 31.8.2016 9:13:50.
      1>Project "D:\Moji podaci\Desktop\detekcija_lica\detekcija_lica\detekcija_lica_GUI\detekcija_lica_GUI.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\ETF\opencv\build\include /IC:\opencv\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib PocetnaForma.cpp
          PocetnaForma.cpp
-     1>d:\moji podaci\desktop\detekcija_lica\detekcija_lica\detekcija_lica_gui\PocetnaForma.h(197): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>d:\moji podaci\desktop\detekcija_lica\detekcija_lica\detekcija_lica_gui\PocetnaForma.h(198): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>d:\moji podaci\desktop\detekcija_lica\detekcija_lica\detekcija_lica_gui\PocetnaForma.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\moji podaci\desktop\detekcija_lica\detekcija_lica\detekcija_lica_gui\PocetnaForma.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\moji podaci\desktop\detekcija_lica\detekcija_lica\detekcija_lica_gui\PocetnaForma.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\moji podaci\desktop\detekcija_lica\detekcija_lica\detekcija_lica_gui\PocetnaForma.h(220): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\opencv\build\include\opencv2\core\types_c.h(340): warning C4793: 'cvRound' : function compiled as native :
          	Inline native assembly not supported in managed code
        Link:
@@ -17,4 +17,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.77
+Time Elapsed 00:00:01.71

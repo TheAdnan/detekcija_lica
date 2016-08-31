@@ -50,6 +50,7 @@ namespace detekcija_lica_GUI {
 	private: System::Windows::Forms::Button^  detektuj;
 	private: System::Windows::Forms::PictureBox^  slika;
 
+
 	protected:
 
 
@@ -68,6 +69,7 @@ namespace detekcija_lica_GUI {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(PocetnaForma::typeid));
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->odabirSlike = (gcnew System::Windows::Forms::Button());
 			this->detektuj = (gcnew System::Windows::Forms::Button());
@@ -81,10 +83,11 @@ namespace detekcija_lica_GUI {
 			// 
 			// odabirSlike
 			// 
-			this->odabirSlike->Location = System::Drawing::Point(208, 288);
-			this->odabirSlike->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->odabirSlike->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->odabirSlike->Location = System::Drawing::Point(231, 319);
+			this->odabirSlike->Margin = System::Windows::Forms::Padding(2);
 			this->odabirSlike->Name = L"odabirSlike";
-			this->odabirSlike->Size = System::Drawing::Size(82, 30);
+			this->odabirSlike->Size = System::Drawing::Size(92, 30);
 			this->odabirSlike->TabIndex = 0;
 			this->odabirSlike->Text = L"Odaberi sliku";
 			this->odabirSlike->UseVisualStyleBackColor = true;
@@ -92,10 +95,11 @@ namespace detekcija_lica_GUI {
 			// 
 			// detektuj
 			// 
-			this->detektuj->Location = System::Drawing::Point(303, 288);
-			this->detektuj->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->detektuj->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->detektuj->Location = System::Drawing::Point(340, 319);
+			this->detektuj->Margin = System::Windows::Forms::Padding(2);
 			this->detektuj->Name = L"detektuj";
-			this->detektuj->Size = System::Drawing::Size(82, 30);
+			this->detektuj->Size = System::Drawing::Size(86, 30);
 			this->detektuj->TabIndex = 1;
 			this->detektuj->Text = L"Detektuj lica";
 			this->detektuj->UseVisualStyleBackColor = true;
@@ -103,10 +107,14 @@ namespace detekcija_lica_GUI {
 			// 
 			// slika
 			// 
+			this->slika->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->slika->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"slika.Image")));
 			this->slika->Location = System::Drawing::Point(20, 15);
-			this->slika->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->slika->Margin = System::Windows::Forms::Padding(2);
 			this->slika->Name = L"slika";
-			this->slika->Size = System::Drawing::Size(364, 255);
+			this->slika->Size = System::Drawing::Size(406, 289);
 			this->slika->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->slika->TabIndex = 2;
 			this->slika->TabStop = false;
@@ -115,11 +123,15 @@ namespace detekcija_lica_GUI {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(402, 328);
+			this->AutoSize = true;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->ClientSize = System::Drawing::Size(437, 360);
 			this->Controls->Add(this->slika);
 			this->Controls->Add(this->detektuj);
 			this->Controls->Add(this->odabirSlike);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"PocetnaForma";
 			this->Text = L"Detekcija lica";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->slika))->EndInit();
