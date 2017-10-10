@@ -1,4 +1,4 @@
-#Face detection Application using OpenCV
+# Face detection Application using OpenCV
 
 _The app is written in Visual C++, using the OpenCV library ([OpenCV official website](http://opencv.org/))._ <br>
 For the face detection process, the implementation of the Viola-Jones algorithm was being used.
